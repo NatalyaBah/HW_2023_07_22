@@ -1,0 +1,24 @@
+.paitinginfo, .paiting{
+	display: inline-block;
+}
+.paitinginfo img, .paiting img{    
+	position: relative;
+	top: 150px;
+	left:150px;
+	transform:translate(-150px,-150px);
+	width:200px;
+	height:200px;
+	object-fit:cover;
+}
+button{
+	border: none;
+}
+.show-paiting{
+	text-align: center;
+}
+.sort-artist{
+	display: inline-block;
+}
+.sort-artist{
+	margin-top: 20px;
+}

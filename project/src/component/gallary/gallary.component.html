@@ -1,0 +1,20 @@
+<div class="paitinginfo" *ngFor="let i of paitingDictionary">
+	<button type="button" (click)="onSelect(i)" *ngIf="!selectedPaiting">
+		<img src="{{i.urlCard}}">
+	</button>
+</div>
+<div *ngIf="selectedPaiting">
+	<div class="show-paiting">
+		<img src="{{selectedPaiting.urlCard}}">
+		<div class="title">Название картины: <strong>{{selectedPaiting.title | uppercase}}</strong></div>
+		<div class="year-of-creation">Год написания:<strong> {{selectedPaiting.yearOfCreation}}</strong> год</div>
+		<div class="artist">Художник: <strong>{{selectedPaiting.artist}}</strong></div>
+		<div class="size">Размер картины: <strong>{{selectedPaiting.size}} см</strong></div>
+	</div>
+	<div class="paiting" *ngFor="let i of paitingDictionary">
+		<div *ngIf="i.artist == selectedPaiting.artist">
+			<button type="button" (click)="onSelect(i)">
+				<img src="{{i.urlCard}}">
+			</button>
+		</div>
+	</div>
